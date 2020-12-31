@@ -101,27 +101,57 @@
     </div>
   </section>
 
-  <section class="section" style="background-color:white;;text-align:right;">
+  <section class="section" style="background-color:#2a2a2a;text-align:left;">
     <div class="container">
       <div class="row">
         <div class="columns">
 
-          <div class="column is-three-quarter" style="height:480px;background-position: center center;background-color:white;color:white;background-image: url(https://madmax.co.ke/wp-content/uploads/2020/09/madmax-9.jpg);background-size: cover;background-repeat:no-repeat;">
-                
-
-          </div>
           <div class="column is-quarter">
 
-            <h1 class="title" style="color:black;font-weight:bolder;font-size:40px;text-align:right;">MAD MAX CARTING,<br/>TWO RIVERS.</h1>
-            <h2 style="font-weight:bold;color:black;font-size:18px;">We are located at the Mad Max Carting within Two Rivers Mall. Come enjoy a meal while watching races or better yet have a go on the track!</h2>
-<img style="justify-content:right;margin-top:5px;" src="https://i.ibb.co/LQDSzfB/logo.png" alt="Screenshot-2020-12-13-at-3-06-55-PM" border="0">       </div>
+            <h1 class="title" v-if="!isMobile()" style="color:white;font-weight:bolder;font-size:40px;text-align:left;">ABOUT US,<br/>THE THUNDERDOME.</h1>
+              <h1 class="title" v-if="isMobile()" style="color:white;font-weight:bolder;font-size:25px;text-align:left;">ABOUT US,<br/>THE THUNDERDOME.</h1>
+            <h2 style="font-weight:bold;color:white;font-size:18px;">Keeping With The MadMax Series Theme We Decided To Come Together With MadMax Karting & Create The Thunderdome!<br/>Watch Our Short Video To Learn More About Us!</h2>
+        </div>
+
+          <div class="column is-three-quarter">
+                <video style="outline :none;" ref="videoRef" autoplay playsinline controls>
+       
+              <source src="../public/Thunderdome.mp4" type="video/mp4">
+            </video>
+
+          </div>
+        
         </div>
 
     </div>
     </div>
   </section>
 
-<section class="section" style="background-color:grey;text-align:left;">
+  <section class="section" style="background-color:white;;text-align:right;">
+    <div class="container">
+      <div class="row">
+        <div class="columns">
+
+          <div class="column is-three-quarter">
+
+          <video style="outline :none;" ref="videoRef" playsinline loop="true" autoplay muted>
+              <source src="../public/madmax.mp4" type="video/mp4">
+            </video>
+
+
+          </div>
+          <div class="column is-quarter">
+            <h1 class="title" v-if="!isMobile()" style="color:black;font-weight:bolder;font-size:40px;text-align:right;">MADMAX KARTING,<br/>TWO RIVERS.</h1>
+            <h1 class="title" v-if="isMobile()" style="color:black;font-weight:bolder;font-size:25px;text-align:right;">MADMAX KARTING,<br/>TWO RIVERS.</h1>
+            <h2 style="font-weight:bold;color:black;font-size:18px;">We are located at the MadMax Karting within Two Rivers Mall. Come enjoy a meal while watching races or better yet have a go on the track!</h2>
+<a href="https://madmax.co.ke/"><img style="justify-content:center;margin-top:5px;height:180px;" src="https://i.ibb.co/LQDSzfB/logo.png" alt="Screenshot-2020-12-13-at-3-06-55-PM" border="0"></a></div>
+        </div>
+
+    </div>
+    </div>
+  </section>
+
+<!-- <section class="section" style="background-color:grey;text-align:left;">
     <div class="container">
       <div class="row">
         <div class="columns">
@@ -130,7 +160,7 @@
 
             <h1 class="title" style="color:white;font-weight:bolder;font-size:35px;text-align:left;">EMPOWERING,<br/>KENYAN YOUTH.</h1>
             <h2 style="font-weight:bold;color:white;font-size:18px;">We believe the future of any economy is empowering young people with opportunities to better themselves. Through our partnership with CENTUM & TRIBUS GROUP, we plan to empower Kenyan youth by providing job opportunities.</h2>
-          <div class="row" style="margin-top:10px;">
+          <div class="row" style="margin-top:10px;"> -->
 
             <!-- <div class="columns">
               <div class="column">
@@ -141,7 +171,7 @@
               </div>
 
             </div> -->
-          </div>
+          <!-- </div>
 
           </div>
 
@@ -156,20 +186,19 @@
 
     </div>
     </div>
-  </section>
+  </section> -->
 
   <footer class="site-footer">
       <div class="container">
         <div class="row" style="margin-left:10px;">
 
           <div class="col-xs-6 col-md-3">
-            <h6>Contact Information</h6>
-            <ul class="footer-links">
-              <li><a href="http://scanfcode.com/about/">About Us</a></li>
-              <li><a href="http://scanfcode.com/contact/">Contact Us</a></li>
-              <li><a href="http://scanfcode.com/contribute-at-scanfcode/">Contribute</a></li>
-              <li><a href="http://scanfcode.com/privacy-policy/">Privacy Policy</a></li>
-              <li><a href="http://scanfcode.com/sitemap/">Sitemap</a></li>
+            <h6 style="text-decoration:underline;font-weight:bolder;">Contact Information</h6>
+            <ul class="footer-links" style="color:white;">
+              <li style="color:white;">Mobile: (+254)768663888</li>
+              <li style="color:white;">Email: ThunderDomeBBQ1@gmail.com</li>
+              <li style="color:white;"><br/>Two Rivers Mall</li>
+              <li style="color:white;">Nairobi, Kenya.</li>
             </ul>
           </div>
         </div>
@@ -260,7 +289,7 @@ export default {
   padding:45px 0 20px;
   font-size:15px;
   line-height:24px;
-  color:#737373;
+  color:white;
 }
 .site-footer hr
 {
@@ -281,7 +310,7 @@ export default {
 }
 .site-footer a
 {
-  color:#737373;
+  color:white;
 }
 .site-footer a:hover
 {
@@ -299,7 +328,7 @@ export default {
 }
 .footer-links a
 {
-  color:#737373
+  color:white;
 }
 .footer-links a:active,.footer-links a:focus,.footer-links a:hover
 {
